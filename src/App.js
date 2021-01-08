@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Clock from "./todolistwork/TimeClock";
+import Weather from "./todolistwork/Weather";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <section className="canterInformation">
+        <div className="js-clock">
+          <h1>
+            <Clock />
+          </h1>
+        </div>
+        <form className="js-form form">
+          <input type="text" placeholder="당신의 이름을 써주세요." />
+        </form>
+
+        <br />
+        <br />
+        <br />
+        <form className="js-toDoForm">
+          <input type="text" placeholder="오늘 할일을 적어보세요!!!" />
+        </form>
+        <ul className="js-toDoList"></ul>
+        <div className="js-weather">
+          <Weather />
+        </div>
+      </section>
     </div>
   );
 }

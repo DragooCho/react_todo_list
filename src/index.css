@@ -1,13 +1,142 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #000000;
+  background-image: url("https://source.unsplash.com/1920x1080/?dog,cat,rabbit");
+  background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* .btn {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  margin-right: 20px;
+} */
+
+.clicked {
+  color: #7f8c8d;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+  object-fit: contain;
+}
+
+.js-clock {
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+
+.js-clock h1,
+.canterInformation h4 {
+  background-color: rgba(255, 255, 255, 0.445);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.js-greetings {
+  font-size: 35px;
+}
+
+.showing input {
+  width: 400px;
+  height: 40px;
+  font-size: 30px;
+}
+
+.js-toDoList {
+  margin-top: 35px;
+  padding-left: 0px;
+}
+
+.js-toDoList li {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.js-toDoList li span {
+  background-color: rgba(255, 255, 255, 0.39);
+  width: 400px;
+  height: 40px;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.js-toDoList li button {
+  color: rgba(201, 126, 126, 0);
+  cursor: pointer;
+  margin-right: 20px;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  all: unset;
+  /* font-size: 30px; */
+  border-radius: 5px;
+  border: solid rgb(0, 0, 0) 2px;
+  margin-right: 20px;
+}
+
+.canterInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.js-weather {
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.445);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+form input {
+  all: unset;
+  background-color: rgba(255, 255, 255, 0.603);
+  width: 400px;
+  height: 40px;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 10px;
 }
