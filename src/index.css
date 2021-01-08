@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
   color: #000000;
-  background-image: url("https://source.unsplash.com/1920x1080/?dog,cat,rabbit");
+  background-image: url("https://loremflickr.com/1920/1080?random=1");
   background-size: cover;
 }
 
