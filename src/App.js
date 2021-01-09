@@ -1,6 +1,7 @@
 import "./App.css";
 import Clock from "./todolistwork/TimeClock";
 import Weather from "./todolistwork/Weather";
+import UserRegistration from "./todolistwork/UserRegistration";
 
 function App() {
   return (
@@ -11,9 +12,7 @@ function App() {
             <Clock />
           </h1>
         </div>
-        <form className="js-form form">
-          <input type="text" placeholder="당신의 이름을 써주세요." />
-        </form>
+        <UserRegistration />
 
         <br />
         <br />
