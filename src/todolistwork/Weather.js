@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { FaTemperatureLow } from "react-icons/fa";
+import { MdPlace } from "react-icons/md";
 
 function Weather() {
-  const [Temperature, setTemperature] = useState();
-  const [Place, setPlace] = useState();
+  const [Temperature, setTemperature] = useState("??");
+  const [Place, setPlace] = useState("Searching...");
 
   const API_KEY = "f8227a305be5ba70e440a6d93f7e90d0";
   const COORDS = "coords";
@@ -63,7 +65,9 @@ function Weather() {
 
   return (
     <div>
-      {Temperature}º @ {Place}
+      <FaTemperatureLow style={{ marginBottom: "-5" }} />
+      {Temperature}º{" "}
+      <MdPlace style={{ marginLeft: "15", marginBottom: "-5" }} /> {Place}
     </div>
   );
 }
