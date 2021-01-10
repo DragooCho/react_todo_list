@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function UserRegistration() {
+  // let [Greeting, setGreeting] = useState("누구입니까?");
+  let [Name, setName] = useState("asdf");
   const form = document.querySelector(".js-form"),
     input = form.querySelector("input"),
     greeting = document.querySelector(".js-greetings");
@@ -8,32 +10,32 @@ function UserRegistration() {
   const USER_LS = "currentUser",
     SHOWING_CN = "showing";
 
-  function saveName(text) {
-    localStorage.setItem(USER_LS, text);
-  }
+  // function saveName(text) {
+  //   localStorage.setItem(USER_LS, text);
+  // }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const currentValue = input.value;
-    paintGreeting(currentValue);
-    saveName(currentValue);
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   const currentValue = input.value;
+  //   paintGreeting(currentValue);
+  //   saveName(currentValue);
+  // }
 
-  function askForName() {
-    form.classList.add(SHOWING_CN);
-    form.addEventListener("submit", handleSubmit);
-  }
+  // function askForName() {
+  //   form.classList.add(SHOWING_CN);
+  //   form.addEventListener("submit", handleSubmit);
+  // }
 
   function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `안녕하세요 ${text}님`;
+    setName(`Hello ${text}`);
   }
 
   function loadName() {
     const currentUser = localStorage.getItem(USER_LS);
     if (currentUser === null) {
-      askForName();
+      // askForName();
     } else {
       paintGreeting(currentUser);
     }
@@ -46,11 +48,12 @@ function UserRegistration() {
   init();
 
   return (
-    <div>
-      <form className="js-form form">
-        <input type="text" placeholder="당신의 이름을 써주세요." />
+    <>
+      <form classNames={("js-form", "form")}>
+        <input type="text" placeholder="What is your name?" />
       </form>
-    </div>
+      <h4 className="js-greetings">{Name} </h4>
+    </>
   );
 }
 

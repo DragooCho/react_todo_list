@@ -2,6 +2,7 @@ import "./App.css";
 import Clock from "./todolistwork/TimeClock";
 import Weather from "./todolistwork/Weather";
 import UserRegistration from "./todolistwork/UserRegistration";
+import Todo from "./todolistwork/Todo";
 
 function App() {
   return (
@@ -13,14 +14,10 @@ function App() {
           </h1>
         </div>
         <UserRegistration />
-
         <br />
         <br />
         <br />
-        <form className="js-toDoForm">
-          <input type="text" placeholder="오늘 할일을 적어보세요!!!" />
-        </form>
-        <ul className="js-toDoList"></ul>
+        <Todo />
         <div className="js-weather">
           <Weather />
         </div>
