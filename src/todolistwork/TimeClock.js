@@ -3,7 +3,7 @@ import useInterval from "use-interval";
 import { FcAlarmClock } from "react-icons/fc";
 
 const TimeClock = () => {
-  const [time, setTime] = React.useState("00:00:00");
+  const [time, setTime] = React.useState(" ?? : 00 : 00 ");
 
   const date = new Date();
 
