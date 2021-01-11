@@ -50,7 +50,7 @@ function UserRegistration() {
 
   return (
     <>
-      <form classNames={('js-form', 'form')}>
+      <form style={{ marginBottom: '-50px', marginTop: '-30px' }}>
         <FaUser
           style={{ fontSize: '50', marginBottom: '-15', marginRight: '10' }}
         />

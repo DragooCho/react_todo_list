@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { FaTemperatureLow } from "react-icons/fa";
-import { MdPlace } from "react-icons/md";
+import React, { useState } from 'react';
+import { FaTemperatureLow } from 'react-icons/fa';
+import { MdPlace } from 'react-icons/md';
 
 function Weather() {
-  const [Temperature, setTemperature] = useState("??");
-  const [Place, setPlace] = useState("Searching...");
+  const [Temperature, setTemperature] = useState('??');
+  const [Place, setPlace] = useState('Searching...');
 
-  const API_KEY = "f8227a305be5ba70e440a6d93f7e90d0";
-  const COORDS = "coords";
+  const API_KEY = 'f8227a305be5ba70e440a6d93f7e90d0';
+  const COORDS = 'coords';
 
   function getWeather(lat, log) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&appid=${API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&appid=${API_KEY}&units=metric`,
     )
       .then(function (response) {
         return response.json();
@@ -40,7 +40,7 @@ function Weather() {
   }
 
   function handleGeoError() {
-    console.log("Cant access geo location");
+    console.log('Cant access geo location');
   }
 
   function askForCoords() {
@@ -65,9 +65,9 @@ function Weather() {
 
   return (
     <div>
-      <FaTemperatureLow style={{ marginBottom: "-5" }} />
-      {Temperature}º{" "}
-      <MdPlace style={{ marginLeft: "15", marginBottom: "-5" }} /> {Place}
+      <FaTemperatureLow style={{ marginBottom: '-5' }} />
+      {Temperature}º{' '}
+      <MdPlace style={{ marginLeft: '15', marginBottom: '-5' }} /> {Place}
     </div>
   );
 }
