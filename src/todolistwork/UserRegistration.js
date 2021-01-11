@@ -1,62 +1,62 @@
-import React, { useState } from "react";
-import { FaUser } from "react-icons/fa";
+import React from 'react';
+import { FaUser } from 'react-icons/fa';
 
 function UserRegistration() {
-  // let [Greeting, setGreeting] = useState("누구입니까?");
-  // let [Name, setName] = useState("asdf");
-  // const form = document.querySelector(".js-form"),
-  //   input = form.querySelector("input"),
-  //   greeting = document.querySelector(".js-greetings");
+  //   // let [Greeting, setGreeting] = useState("누구입니까?");
+  //   const [Name, setName] = useState();
+  //   // const form = document.querySelector(".js-form"),
+  //   //   input = form.querySelector("input"),
+  //   // greeting = document.querySelector(".js-greetings");
 
-  // const USER_LS = "currentUser",
-  //   SHOWING_CN = "showing";
+  //   const USER_LS = "currentUser",
+  //   //   SHOWING_CN = "showing";
 
-  // function saveName(text) {
-  //   localStorage.setItem(USER_LS, text);
-  // }
+  //   // function saveName(text) {
+  //   //   localStorage.setItem(USER_LS, text);
+  //   // }
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   const currentValue = input.value;
-  //   paintGreeting(currentValue);
-  //   saveName(currentValue);
-  // }
+  //   // function handleSubmit(event) {
+  //   //   event.preventDefault();
+  //   //   const currentValue = input.value;
+  //   //   paintGreeting(currentValue);
+  //   //   saveName(currentValue);
+  //   // }
 
-  // function askForName() {
-  //   form.classList.add(SHOWING_CN);
-  //   form.addEventListener("submit", handleSubmit);
-  // }
+  //   // function askForName() {
+  //   //   form.classList.add(SHOWING_CN);
+  //   //   form.addEventListener("submit", handleSubmit);
+  //   // }
 
-  // function paintGreeting(text) {
-  //   form.classList.remove(SHOWING_CN);
-  //   greeting.classList.add(SHOWING_CN);
-  //   setName(`Hello ${text}`);
-  // }
+  //   function paintGreeting(text) {
+  //     // form.classList.remove(SHOWING_CN);
+  //     // greeting.classList.add(SHOWING_CN);
+  //     setName(text);
+  //   };
 
-  // function loadName() {
-  //   const currentUser = localStorage.getItem(USER_LS);
-  //   if (currentUser === null) {
-  //     // askForName();
-  //   } else {
-  //     paintGreeting(currentUser);
+  //   function loadName() {
+  //     const currentUser = localStorage.getItem(USER_LS);
+  //     if (currentUser === null) {
+  //       // askForName();
+  //     } else {
+  //       paintGreeting(currentUser);
+  //     }
   //   }
-  // }
 
-  // function init() {
-  //   loadName();
-  // }
+  //   function init() {
+  //     loadName();
+  //   }
 
-  // init();
+  //   init();
 
   return (
     <>
-      <form classNames={("js-form", "form")}>
+      <form classNames={('js-form', 'form')}>
         <FaUser
-          style={{ fontSize: "50", marginBottom: "-15", marginRight: "10" }}
+          style={{ fontSize: '50', marginBottom: '-15', marginRight: '10' }}
         />
-        <input type="text" placeholder="What is your name?" value="dragoo" />
+        <input type="text" placeholder="What is your name?" />
       </form>
-      {/* <h4 className="js-greetings">{Name} </h4> */}
+      {/* <h4>{Name}</h4> */}
     </>
   );
 }

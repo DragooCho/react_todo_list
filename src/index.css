@@ -1,18 +1,18 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
   color: #000000;
-  background-image: url("https://loremflickr.com/1920/1080?random=1");
+  background-image: url('https://loremflickr.com/1920/1080?random=1');
   background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -71,56 +71,36 @@ button {
   padding: 30px;
 }
 
-.js-greetings {
-  font-size: 35px;
-}
-
-.showing input {
-  width: 400px;
-  height: 40px;
-  font-size: 30px;
-}
-
-.js-toDoList {
-  margin-top: 35px;
-  padding-left: 0px;
-}
-
-.js-toDoList li {
-  font-size: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.js-toDoList li span {
-  background-color: rgba(255, 255, 255, 0.39);
-  width: 400px;
-  height: 40px;
-  font-size: 30px;
-  border-radius: 20px;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.js-toDoList li button {
-  color: rgba(201, 126, 126, 0);
-  cursor: pointer;
-  margin-right: 20px;
-  width: 10px;
-  height: 10px;
-  text-align: center;
-  all: unset;
-  /* font-size: 30px; */
-  border-radius: 5px;
-  border: solid rgb(0, 0, 0) 2px;
-  margin-right: 20px;
-}
-
 .canterInformation {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.TodoList {
+  min-height: 320px;
+  max-height: 513px;
+  overflow-y: auto;
+}
+
+.TodoListItem {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.TodoListItem :nth-child(even) {
+  background: #f8f9fa;
+}
+
+.checkbox {
+  cursor: pointer;
+  flex: 1; /* 차지 할 수 있는 영역 모두 차지 */
+  display: flex;
+  align-items: center;
+}
+.checkbox svg .clicked {
+  color: #22b8cf;
 }
 
 .js-weather {

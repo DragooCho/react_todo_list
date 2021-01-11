@@ -1,8 +1,10 @@
-import "./App.css";
-import Clock from "./todolistwork/TimeClock";
-import Weather from "./todolistwork/Weather";
-import UserRegistration from "./todolistwork/UserRegistration";
-import Todo from "./todolistwork/Todo";
+import './App.css';
+import Clock from './todolistwork/TimeClock';
+import Weather from './todolistwork/Weather';
+import UserRegistration from './todolistwork/UserRegistration';
+import Todo from './todolistwork/Todo';
+import TodoInsert from './todolistwork/TodoInsert';
+import TodoList from './todolistwork/TodoList';
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
         <br />
         <br />
         <br />
-        <Todo />
+        <Todo>
+          <TodoInsert />
+          <TodoList />
+        </Todo>
         <div className="js-weather">
           <Weather />
         </div>

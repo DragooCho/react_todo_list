@@ -1,17 +1,12 @@
-import React from "react";
-import { RiCalendarTodoFill } from "react-icons/ri";
+import React from 'react';
+// import { RiCalendarTodoFill } from "react-icons/ri";
 
-function Todo() {
+function Todo({ children }) {
   return (
-    <>
-      <form>
-        <RiCalendarTodoFill
-          style={{ fontSize: "50", marginBottom: "-15", marginRight: "10" }}
-        />
-        <input type="text" placeholder="오늘 할일을 적어보세요!!!" />
-      </form>
-      <ul className="js-toDoList"></ul>
-    </>
+    <div className="TodoTemplate">
+      <div className="app-title">일정 관리</div>
+      <div className="content">{children}</div>
+    </div>
   );
 }
 
