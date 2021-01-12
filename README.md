@@ -6,6 +6,6 @@
 <p>리액트로 재적용 하면서 작업중입니다.</p>
 
 <br />
-https://serranoarevalo.github.io/momonton/
+https://dragoocho.github.io/react_todo_list/
 <br />
-참고한 작업물 주소입니다.
+배포 완성된 작업물 주소입니다.
