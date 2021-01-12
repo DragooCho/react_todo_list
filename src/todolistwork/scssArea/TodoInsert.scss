@@ -2,7 +2,6 @@
   display: flex;
   background: #87b9dfd3;
   input {
-    // 기본 스타일 초기화
     background: none;
     outline: none;
     border: none;
@@ -15,11 +14,9 @@
     &::placeholder {
       color: rgb(0, 0, 0);
     }
-    // 버튼을 제외한 영역을 모두 차지하기
     flex: 1;
   }
   button {
-    // 기본 스타일 초기화
     background: none;
     outline: none;
     border: none;
