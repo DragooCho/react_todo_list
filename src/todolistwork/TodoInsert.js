@@ -6,30 +6,14 @@ import './scssArea/TodoInsert.scss';
 const TodoInsert = ({ onInsert }) => {
   const [value, setValue] = useState('');
 
-  // const PENDING = 'PENDING';
-
-  // const todoOJT = { randomId: String(Date.now()), text: value };
-
-  function getTodoObject(text) {
-    return {
-      id: String(Date.now()),
-      text,
-    };
-  }
-
   const onChange = useCallback((e) => {
     setValue(e.target.value);
   }, []);
 
   const onSubmit = useCallback(
     (e) => {
-      let memo;
       onInsert(value);
-      const taskObj = getTodoObject(value);
-      memo(taskObj);
-      // localStorage.setItem(PENDING, JSON.stringify(memo));
       setValue('');
-
       e.preventDefault();
     },
     [onInsert, value],

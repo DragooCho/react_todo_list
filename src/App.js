@@ -2,7 +2,6 @@ import React, { useCallback, useRef, useState } from 'react';
 import './App.css';
 import Clock from './todolistwork/TimeClock';
 import Weather from './todolistwork/Weather';
-import UserRegistration from './todolistwork/UserRegistration';
 import TodoTemplate from './todolistwork/TodoTemplate';
 import TodoInsert from './todolistwork/TodoInsert';
 import TodoList from './todolistwork/TodoList';
@@ -36,7 +35,7 @@ const App = () => {
         checked: false,
       };
       setTodos(todos.concat(todo));
-      nextId.current += 1; 
+      nextId.current += 1;
     },
     [todos],
   );
@@ -67,7 +66,6 @@ const App = () => {
             <Clock />
           </h1>
         </div>
-        <UserRegistration />
         <TodoTemplate>
           <TodoInsert onInsert={onInsert} />
           <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
