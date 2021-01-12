@@ -6,6 +6,8 @@ import './scssArea/TodoInsert.scss';
 const TodoInsert = ({ onInsert }) => {
   const [value, setValue] = useState('');
 
+  const todoOJT = { randomId: String(Date.now()), text: value };
+
   const onChange = useCallback((e) => {
     setValue(e.target.value);
   }, []);
@@ -13,6 +15,7 @@ const TodoInsert = ({ onInsert }) => {
   const onSubmit = useCallback(
     (e) => {
       onInsert(value);
+      localStorage.setItem('memo', JSON.stringify(todoOJT));
       setValue(''); // value 값 초기화
 
       // submit 이벤트는 브라우저에서 새로고침을 발생시킵니다.
