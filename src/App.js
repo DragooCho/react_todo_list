@@ -71,7 +71,7 @@ const App = () => {
       setTodos(todos.concat(todo));
       nextId.current += 1;
       // toDos.push(todo);
-      // saveToDos();
+      // localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
       // loadToDos();
     },
     [todos],
