@@ -5,37 +5,74 @@ import Weather from './todolistwork/Weather';
 import TodoTemplate from './todolistwork/TodoTemplate';
 import TodoInsert from './todolistwork/TodoInsert';
 import TodoList from './todolistwork/TodoList';
+import TestTodo from './todolistwork/testTodo';
 
 const App = () => {
   const [todos, setTodos] = useState([
     {
-      id: 1,
       text: '리액트의 기초 알아보기',
+      id: 1,
       checked: true,
     },
     {
-      id: 2,
       text: '컴포넌트 스타일링해 보기',
+      id: 2,
       checked: true,
     },
     {
-      id: 3,
       text: '일정 관리 앱 만들어 보기',
+      id: 3,
       checked: false,
     },
   ]);
 
   const nextId = useRef(4);
 
+  // const TODOS_LS = 'testToDos';
+  // const toDos = [];
+
+  // function saveToDos() {
+  //   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+  // }
+
+  // const paintToDo = useCallback(
+  //   (text) => {
+  //     const todo = {
+  //       text,
+  //       id: nextId.current,
+  //       checked: false,
+  //     };
+  //     setTodos(todos.concat(todo));
+  //     nextId.current += 1;
+  //   },
+  //   [todos],
+  // );
+
+  // function loadToDos() {
+  //   const toDos = localStorage.getItem(TODOS_LS);
+  //   if (toDos !== null) {
+  //     const loadedToDos = localStorage.getItem(TODOS_LS);
+  //     if (loadedToDos !== null) {
+  //       const parsedToDos = JSON.parse(loadedToDos);
+  //       parsedToDos.forEach(function (toDo) {
+  //         paintToDo(toDo.text);
+  //       });
+  //     }
+  //   }
+  // }
+
   const onInsert = useCallback(
     (text) => {
       const todo = {
-        id: nextId.current,
         text,
+        id: nextId.current,
         checked: false,
       };
       setTodos(todos.concat(todo));
       nextId.current += 1;
+      // toDos.push(todo);
+      // saveToDos();
+      // loadToDos();
     },
     [todos],
   );
@@ -70,6 +107,7 @@ const App = () => {
           <TodoInsert onInsert={onInsert} />
           <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
         </TodoTemplate>
+        <TestTodo />
         <div className="js-weather">
           <Weather />
         </div>
