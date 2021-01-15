@@ -10,21 +10,9 @@ function Weather() {
   });
   const { Temperature, Place, WIcon } = forecast;
 
-  // const [Temperature, setTemperature] = useState('??');
-  // const [Place, setPlace] = useState('Searching...');
-
-  const API_KEY = 'f8227a305be5ba70e440a6d93f7e90d0';
+  // const API_KEY = 'f8227a305be5ba70e440a6d93f7e90d0'; // user: deagoocho
+  const API_KEY = 'e6c2edba7c9e1616e2470a320349f652'; // user: deagoocho2
   const COORDS = 'coords';
-
-  // const weatherIcon = {
-  //   backgroundImage: `url('http://openweathermap.org/img/wn/${WIcon}@2x.png')`,
-  //   backgroundColor: '#97979783',
-  //   borderRadius: '30px',
-  //   width: '100px',
-  //   height: '100px',
-  //   marginLeft: '10px',
-  //   padding: '0px',
-  // };
 
   function getWeather(lat, log) {
     fetch(
@@ -36,11 +24,8 @@ function Weather() {
       .then(function (json) {
         const temperature = json.main.temp;
         const place = json.name;
-        const icon = json.icon;
+        const icon = json.weather[0].icon;
         setForecast({ Temperature: temperature, Place: place, WIcon: icon });
-        // weatherIcon(Icon)
-        // setTemperature(temperature);
-        // setPlace(place);
       });
   }
 
@@ -98,7 +83,7 @@ function Weather() {
           marginLeft: '10px',
           padding: '0px',
         }}
-      ></div>
+      />
     </div>
   );
 }
