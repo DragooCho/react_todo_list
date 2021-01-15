@@ -5,7 +5,7 @@ import Weather from './todolistwork/Weather';
 import TodoTemplate from './todolistwork/TodoTemplate';
 import TodoInsert from './todolistwork/TodoInsert';
 import TodoList from './todolistwork/TodoList';
-import TestTodo from './todolistwork/testTodo';
+// import TestTodo from './todolistwork/testTodo';
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -107,7 +107,7 @@ const App = () => {
           <TodoInsert onInsert={onInsert} />
           <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
         </TodoTemplate>
-        <TestTodo />
+        {/* <TestTodo /> */}
         <div className="js-weather">
           <Weather />
         </div>

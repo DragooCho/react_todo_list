@@ -3,11 +3,27 @@ import { FaTemperatureLow } from 'react-icons/fa';
 import { MdPlace } from 'react-icons/md';
 
 function Weather() {
-  const [Temperature, setTemperature] = useState('??');
-  const [Place, setPlace] = useState('Searching...');
+  const [forecast, setForecast] = useState({
+    Temperature: '??',
+    Place: 'Searching...',
+  });
+  const { Temperature, Place } = forecast;
+
+  // const [Temperature, setTemperature] = useState('??');
+  // const [Place, setPlace] = useState('Searching...');
 
   const API_KEY = 'f8227a305be5ba70e440a6d93f7e90d0';
   const COORDS = 'coords';
+
+  const weatherIcon = {
+    backgroundImage: `url('http://openweathermap.org/img/wn/10d@2x.png')`,
+    backgroundColor: '#97979783',
+    borderRadius: '30px',
+    width: '100px',
+    height: '100px',
+    marginLeft: '10px',
+    padding: '0px',
+  };
 
   function getWeather(lat, log) {
     fetch(
@@ -19,8 +35,11 @@ function Weather() {
       .then(function (json) {
         const temperature = json.main.temp;
         const place = json.name;
-        setTemperature(temperature);
-        setPlace(place);
+        // const Icon = json.icon;
+        setForecast({ Temperature: temperature, Place: place });
+        weatherIcon();
+        // setTemperature(temperature);
+        // setPlace(place);
       });
   }
 
@@ -64,10 +83,11 @@ function Weather() {
   init();
 
   return (
-    <div>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
       <FaTemperatureLow style={{ marginBottom: '-5' }} />
-      {Temperature}º{' '}
+      {Temperature}º
       <MdPlace style={{ marginLeft: '15', marginBottom: '-5' }} /> {Place}
+      <div style={weatherIcon} />
     </div>
   );
 }
