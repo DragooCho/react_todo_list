@@ -84,6 +84,10 @@ function Weather() {
           padding: '0px',
         }}
       />
+      <img
+        src={`http://openweathermap.org/img/wn/${WIcon}@2x.png`}
+        alt="Weather icons"
+      />
     </div>
   );
 }
