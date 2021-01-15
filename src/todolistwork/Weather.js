@@ -6,8 +6,9 @@ function Weather() {
   const [forecast, setForecast] = useState({
     Temperature: '??',
     Place: 'Searching...',
+    WIcon: '???',
   });
-  const { Temperature, Place } = forecast;
+  const { Temperature, Place, WIcon } = forecast;
 
   // const [Temperature, setTemperature] = useState('??');
   // const [Place, setPlace] = useState('Searching...');
@@ -15,15 +16,15 @@ function Weather() {
   const API_KEY = 'f8227a305be5ba70e440a6d93f7e90d0';
   const COORDS = 'coords';
 
-  const weatherIcon = {
-    backgroundImage: `url('http://openweathermap.org/img/wn/10d@2x.png')`,
-    backgroundColor: '#97979783',
-    borderRadius: '30px',
-    width: '100px',
-    height: '100px',
-    marginLeft: '10px',
-    padding: '0px',
-  };
+  // const weatherIcon = {
+  //   backgroundImage: `url('http://openweathermap.org/img/wn/${WIcon}@2x.png')`,
+  //   backgroundColor: '#97979783',
+  //   borderRadius: '30px',
+  //   width: '100px',
+  //   height: '100px',
+  //   marginLeft: '10px',
+  //   padding: '0px',
+  // };
 
   function getWeather(lat, log) {
     fetch(
@@ -35,9 +36,9 @@ function Weather() {
       .then(function (json) {
         const temperature = json.main.temp;
         const place = json.name;
-        // const Icon = json.icon;
-        setForecast({ Temperature: temperature, Place: place });
-        weatherIcon();
+        const icon = json.icon;
+        setForecast({ Temperature: temperature, Place: place, WIcon: icon });
+        // weatherIcon(Icon)
         // setTemperature(temperature);
         // setPlace(place);
       });
@@ -87,7 +88,17 @@ function Weather() {
       <FaTemperatureLow style={{ marginBottom: '-5' }} />
       {Temperature}º
       <MdPlace style={{ marginLeft: '15', marginBottom: '-5' }} /> {Place}
-      <div style={weatherIcon} />
+      <div
+        style={{
+          backgroundImage: `url('http://openweathermap.org/img/wn/${WIcon}@2x.png')`,
+          backgroundColor: '#97979783',
+          borderRadius: '30px',
+          width: '100px',
+          height: '100px',
+          marginLeft: '10px',
+          padding: '0px',
+        }}
+      ></div>
     </div>
   );
 }
