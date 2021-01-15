@@ -70,23 +70,24 @@ function Weather() {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <FaTemperatureLow style={{ marginBottom: '-5' }} />
+      <FaTemperatureLow style={{ marginBottom: '-5' }} alt="Temperature here" />
       {Temperature}º
-      <MdPlace style={{ marginLeft: '15', marginBottom: '-5' }} /> {Place}
-      <div
-        style={{
-          backgroundImage: `url('http://openweathermap.org/img/wn/${WIcon}@2x.png')`,
-          backgroundColor: '#97979783',
-          borderRadius: '30px',
-          width: '100px',
-          height: '100px',
-          marginLeft: '10px',
-          padding: '0px',
-        }}
-      />
+      <MdPlace
+        style={{ marginLeft: '15', marginBottom: '-5' }}
+        alt="My place"
+      />{' '}
+      {Place}
       <img
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.445)',
+          color: 'rgb(0, 0, 0)',
+          borderRadius: '40px',
+          marginLeft: '10px',
+        }}
         src={`http://openweathermap.org/img/wn/${WIcon}@2x.png`}
         alt="Weather icons"
+        width="80"
+        height="80"
       />
     </div>
   );
