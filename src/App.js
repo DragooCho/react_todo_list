@@ -107,7 +107,6 @@ const App = () => {
           <TodoInsert onInsert={onInsert} />
           <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
         </TodoTemplate>
-        {/* <TestTodo /> */}
         <div className="js-weather">
           <Weather />
         </div>
