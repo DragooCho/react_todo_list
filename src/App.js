@@ -5,7 +5,6 @@ import Weather from './todolistwork/Weather';
 import TodoTemplate from './todolistwork/TodoTemplate';
 import TodoInsert from './todolistwork/TodoInsert';
 import TodoList from './todolistwork/TodoList';
-// import TestTodo from './todolistwork/testTodo';
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -28,39 +27,6 @@ const App = () => {
 
   const nextId = useRef(4);
 
-  // const TODOS_LS = 'testToDos';
-  // const toDos = [];
-
-  // function saveToDos() {
-  //   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
-  // }
-
-  // const paintToDo = useCallback(
-  //   (text) => {
-  //     const todo = {
-  //       text,
-  //       id: nextId.current,
-  //       checked: false,
-  //     };
-  //     setTodos(todos.concat(todo));
-  //     nextId.current += 1;
-  //   },
-  //   [todos],
-  // );
-
-  // function loadToDos() {
-  //   const toDos = localStorage.getItem(TODOS_LS);
-  //   if (toDos !== null) {
-  //     const loadedToDos = localStorage.getItem(TODOS_LS);
-  //     if (loadedToDos !== null) {
-  //       const parsedToDos = JSON.parse(loadedToDos);
-  //       parsedToDos.forEach(function (toDo) {
-  //         paintToDo(toDo.text);
-  //       });
-  //     }
-  //   }
-  // }
-
   const onInsert = useCallback(
     (text) => {
       const todo = {
@@ -70,9 +36,6 @@ const App = () => {
       };
       setTodos(todos.concat(todo));
       nextId.current += 1;
-      // toDos.push(todo);
-      // localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
-      // loadToDos();
     },
     [todos],
   );
