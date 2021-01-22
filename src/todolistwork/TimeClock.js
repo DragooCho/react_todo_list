@@ -13,7 +13,7 @@ const TimeClock = () => {
 
   return (
     <div>
-      <FcAlarmClock style={{ marginBottom: '-15', marginRight: '10' }} />
+      <FcAlarmClock style={{ marginBottom: '-15', marginRight: '60' }} />
       {time}
     </div>
   );
