@@ -10,8 +10,8 @@ function Weather() {
   });
   const { Temperature, Place, WIcon } = forecast;
 
-  // const API_KEY = 'f8227a305be5ba70e440a6d93f7e90d0'; // user: deagoocho
-  const API_KEY = 'e6c2edba7c9e1616e2470a320349f652'; // user: deagoocho2
+  const API_KEY = 'f8227a305be5ba70e440a6d93f7e90d0'; // user: deagoocho
+  // const API_KEY = 'e6c2edba7c9e1616e2470a320349f652'; // user: deagoocho2
   const COORDS = 'coords';
 
   function getWeather(lat, log) {
