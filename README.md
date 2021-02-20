@@ -8,7 +8,7 @@ JavaScript, React,  Node.js
 <br />
 <br />
 ## 구현 배경
-- JavaScript로 구현했던 프로젝트를 React·js로 다시 프로그래밍했던 작업물입니다.    
+- JavaScript로 구현했던 프로젝트를 React에 맞춰 구현 했습니다.    
 - React·js의 컴포넌트의 활용법 기초개념과 Node**·**js의Node.js의 여러 패키지를 경험하고    
 활용하는 감각을 쌓는 데 많은 도움이 많이 되었습니다.     
 - 이전의 바닐라 자바스크립트로 프로그래밍했던 To-do List의 미흡했던 기능을 보안하고    
@@ -18,6 +18,8 @@ JavaScript, React,  Node.js
 <br />
 
 ## 기능 추가
+
+![](https://github.com/DragooCho/TIL/blob/main/image/wed.png?raw=true)
 - 온도표시뿐 만 아니라 자신의 위치한    
 날씨 상황을 간략히 보여주는 이미지를 구현했습니다.
 <br />
