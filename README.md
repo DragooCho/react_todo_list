@@ -24,7 +24,7 @@ JavaScript, React,  Node.js
 날씨 상황을 간략히 보여주는 이미지를 구현했습니다.
 <br />
 <br />
-<h1>File-ree</h1>
+<h1>File-Tree</h1>
 <br />
 <p>📦src</p>
 <p> ┣ 📂todolistwork</p>
