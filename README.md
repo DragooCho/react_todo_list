@@ -1,10 +1,12 @@
 
 # 리액트 투투 리스트 어플리케이션
 ![ex_screenshot](https://dragoocho.netlify.app/static/093bf446bcc4a73022215654cecac28e/c1b63/reactTodo.png)
-
+<br />
+<br />
 ## 주요 기술 스택  
 ES6+, React,  Node.js
-
+<br />
+<br />
 ## 구현 배경
 JavaScript로 구현했던 프로젝트를 React·js로 다시 프로그래밍했던 작업물입니다.    
 React·js의 컴포넌트의 활용법 기초개념과 Node**·**js의Node.js의 여러 패키지를 경험하고    
