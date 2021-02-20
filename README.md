@@ -1,9 +1,17 @@
-# React-ToDo-List
 
-<br />
-<br />
-<p>자바스크립트의 스택을 적용했던 모멘텀 투두 리스트 작업물을</p>
-<p>리액트로 재적용 하면서 완성했습니다.</p>
+# 리액트 투투 리스트 어플리케이션
+![ex_screenshot](https://dragoocho.netlify.app/static/093bf446bcc4a73022215654cecac28e/c1b63/reactTodo.png)
+
+## 주요 기술 스택  
+ES6+, React,  Node.js
+
+## 구현 배경
+JavaScript로 구현했던 프로젝트를 React·js로 다시 프로그래밍했던 작업물입니다.    
+React·js의 컴포넌트의 활용법 기초개념과 Node**·**js의Node.js의 여러 패키지를 경험하고    
+활용하는 감각을 쌓는 데 많은 도움이 많이 되었습니다.     
+이전의 바닐라 자바스크립트로 프로그래밍했던 To-do List의 미흡했던 기능을 보안하고    
+좀 더 스타일링 있게 바꾸었지만 리액터에서 로컬스토리지의 기능을    
+전부 구현 못한 것이 아쉬운 결과물이었습니다.   
 <br />
 <br />
 <h2>File-tree</h2>
@@ -28,6 +36,6 @@
 <p> ┗ 📜reportWebVitals.js</p>
 <br />
 <br />
+
+## DEMO
 https://dragoocho.github.io/react_todo_list/
-<br />
-배포 완성된 작업물 주소입니다.
