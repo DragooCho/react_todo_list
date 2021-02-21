@@ -20,8 +20,7 @@ JavaScript, React,  Node.js
 ## 기능 추가
 
 ![](https://github.com/DragooCho/TIL/blob/main/image/wed.png?raw=true)
-- 온도표시뿐 만 아니라 자신의 위치한    
-날씨 상황을 간략히 보여주는 이미지를 구현했습니다.
+- 자신의 위치한 날씨 상황을 간략히 보여주는 이미지를 구현했습니다.
 <br />
 <br />
 <h1>File-Tree</h1>
