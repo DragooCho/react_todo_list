@@ -1,4 +1,4 @@
-# 리액트 투투 리스트 어플리케이션 [![HitCount](http://hits.dwyl.com/dragoocho/DragooCho/react_todo_list.svg)](http://hits.dwyl.com/dragoocho/DragooCho/react_todo_list)
+# 리액트 투투 리스트 어플리케이션 [![HitCount](http://hits.dwyl.com/dragoocho/react_todo_list.svg)](http://hits.dwyl.com/dragoocho/react_todo_list)
 
 ![screenshot](https://github.com/DragooCho/TIL/blob/main/image/cap6.png?raw=true)
 
