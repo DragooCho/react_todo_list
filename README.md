@@ -7,7 +7,10 @@
 
 ## 주요 기술 스택
 
-JavaScript, React, Node.js
+- JavaScript 
+- React 17.0.1
+- Node.js
+
 <br />
 <br />
 
