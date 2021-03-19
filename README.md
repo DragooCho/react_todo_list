@@ -9,7 +9,6 @@
 
 - JavaScript 
 - React 17.0.1
-- Node.js
 
 <br />
 <br />
