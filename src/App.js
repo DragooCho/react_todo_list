@@ -9,17 +9,17 @@ import TodoList from './todolistwork/TodoList';
 const App = () => {
   const [todos, setTodos] = useState([
     {
-      text: '리액트의 기초 알아보기',
+      text: '기록',
       id: 1,
       checked: true,
     },
     {
-      text: '컴포넌트 스타일링해 보기',
+      text: '영화감상',
       id: 2,
       checked: true,
     },
     {
-      text: '일정 관리 앱 만들어 보기',
+      text: '저녁밥을 집에서 먹기',
       id: 3,
       checked: false,
     },
